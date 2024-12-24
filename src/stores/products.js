@@ -3,129 +3,128 @@ import { defineStore } from 'pinia'
 
 export const productsStore = defineStore('products', {
   state: () => ({
-    products: [
+    products:  [
       {
         "id": 1,
-        "brand": "Марка А",
+        "brand": "БКК",
         "price": 150.99,
         "name": "Хлеб пшеничный",
-        "description": "Свежий пшеничный хлеб с хрустящей корочкой.",
-        "image": "https://www.abc-bakery.com/wp-content/uploads/2021/01/fresh-bread.jpg"
+        "description": "Хлеб ржаной на закваске без дрожжей нарезанный",
+        "image": "https://img.05.ru/ut11img/darkstore/00000209279/1.jpg"
       },
       {
         "id": 2,
-        "brand": "Марка Б",
+        "brand": "Чабан",
         "price": 89.99,
-        "name": "Молоко 3.2%",
+        "name": "Молоко пастеризованное",
         "description": "Пастеризованное молоко 3.2% жирности, полезное для здоровья.",
-        "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSuqvwmA6OMs-nQUmaI1uF2lhZ38K10BkuNPQ&s"
+        "image": "https://img.05.ru/ut11img/darkstore/00000187785/3.jpg "
       },
       {
         "id": 3,
-        "brand": "Марка В",
+        "brand": "Столовые",
         "price": 230.49,
         "name": "Яйца куриные",
-        "description": "Свежие яйца куриные, отличного качества.",
-        "image": "https://www.verywellfit.com/thmb/a2B5BptPbVyn5D32o6DtvwUhrho=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/white-eggs-1241675-hero-10f5e2b2275b44c48d71e51b6022d900.jpg"
+        "description": "Яйцо столовое 10 штук бумажная упаковка",
+        "image": "https://img.05.ru/ut11img/darkstore/00000189563/1.jpg"
       },
       {
         "id": 4,
-        "brand": "Марка Г",
+        "brand": "Картофель",
         "price": 95.99,
         "name": "Картофель",
-        "description": "Картофель среднего размера, идеален для жарки и пюре.",
-        "image": "https://upload.wikimedia.org/wikipedia/commons/c/cf/Raw_Potatoes.jpg"
+        "description": "1кг",
+        "image": "https://img.05.ru/ut11img/darkstore/00000207333/3.jpg"
       },
       {
         "id": 5,
-        "brand": "Марка Д",
+        "brand": "Морковь",
         "price": 120.50,
         "name": "Морковь",
-        "description": "Свежая морковь, насыщенная витаминами и микроэлементами.",
-        "image": "https://upload.wikimedia.org/wikipedia/commons/7/7c/Carrot_on_white.jpg"
+        "description": " Вес 500г",
+        "image": "https://img.05.ru/ut11img/darkstore/00000207101/3.jpg"
       },
       {
         "id": 6,
-        "brand": "Марка Е",
+        "brand": "Томаты",
         "price": 250.00,
         "name": "Томаты",
-        "description": "Свежие томаты, вкусные и сочные, с богатым вкусом.",
-        "image": "https://upload.wikimedia.org/wikipedia/commons/4/44/Tomato_je.jpg"
+        "description": "Черри 500г",
+        "image": "https://img.05.ru/ut11img/darkstore/00000207330/2.jpg"
       },
       {
         "id": 7,
-        "brand": "Марка Ж",
+        "brand": "Огурцы",
         "price": 89.99,
         "name": "Огурцы",
-        "description": "Хрустящие огурцы с приятным вкусом.",
-        "image": "https://upload.wikimedia.org/wikipedia/commons/6/6b/English_Cucumber.jpg"
+        "description": "Вес 500г",
+        "image": "https://img.05.ru/ut11img/darkstore/00000207332/2.jpg"
       },
       {
         "id": 8,
-        "brand": "Марка И",
-        "price": 179.99,
+        "brand": "Филе куриное Хицунов",
+        "price": 199.99,
         "name": "Куриное филе",
-        "description": "Нежное куриное филе, без костей и шкурки.",
-        "image": "https://upload.wikimedia.org/wikipedia/commons/9/97/Chicken_breast_meat.jpg"
+        "description": "Филе 175-250гр Халяль",
+        "image": "https://img.05.ru/ut11img/darkstore/00000209070/2.jpg"
       },
       {
         "id": 9,
-        "brand": "Марка К",
-        "price": 129.99,
-        "name": "Сыр твердый",
-        "description": "Качественный твердый сыр, с насыщенным вкусом.",
-        "image": "https://upload.wikimedia.org/wikipedia/commons/2/2f/Swiss_cheese.jpg"
+        "brand": "Фарш говяжий Gur Meat",
+        "price": 199.99,
+        "name": "Фарш говяжий",
+        "description": "Фарш говяжий замороженный 500гр Gur Meat",
+        "image": "https://img.05.ru/ut11img/darkstore/00000208106/5.jpg"
       },
       {
         "id": 10,
-        "brand": "Марка Л",
+        "brand": "Биойогурт АктиБио",
         "price": 75.49,
         "name": "Йогурт натуральный",
-        "description": "Натуральный йогурт без добавок и сахара, полезный и вкусный.",
-        "image": "https://upload.wikimedia.org/wikipedia/commons/2/2d/Plain_yogurt_in_bowl.jpg"
+        "description": "Биойогурт с черникой и льняными семенами 130гр АктиБио",
+        "image": "https://img.05.ru/ut11img/darkstore/00000206746/1.jpg"
       },
       {
         "id": 11,
-        "brand": "Марка М",
+        "brand": "Мука Снежана",
         "price": 99.00,
         "name": "Мука пшеничная",
-        "description": "Высококачественная пшеничная мука для выпечки.",
-        "image": "https://upload.wikimedia.org/wikipedia/commons/7/7a/Flour_bag.jpg"
+        "description": "Высший сорт, 2кг",
+        "image": "https://img.05.ru/ut11img/darkstore/00000187671/1.jpg"
       },
       {
         "id": 12,
-        "brand": "Марка Н",
+        "brand": "Чабан",
         "price": 220.00,
-        "name": "Рыба лосось",
-        "description": "Свежий лосось, отличный выбор для жарки или запеканки.",
-        "image": "https://upload.wikimedia.org/wikipedia/commons/f/f6/Salmon_fish.jpg"
+        "name": "Масло сливочное",
+        "description": "Масло сливочное 82,5%, 180гр",
+        "image": "https://img.05.ru/ut11img/darkstore/00000187795/2.jpg"
       },
       {
         "id": 13,
-        "brand": "Марка О",
-        "price": 60.00,
+        "brand": "Цветная капуста",
+        "price": 360.00,
         "name": "Капуста белокочанная",
-        "description": "Свежая капуста, идеальна для салатов и тушеных блюд.",
-        "image": "https://upload.wikimedia.org/wikipedia/commons/4/46/Cabbage_5.jpg"
+        "description": "Цветная капуста 1100-1400г",
+        "image": "https://img.05.ru/ut11img/darkstore/00000231394/2.jpg"
       },
       {
         "id": 14,
-        "brand": "Марка П",
+        "brand": "Макаронные изделия Makfa",
         "price": 180.00,
-        "name": "Свинина",
-        "description": "Нежное мясо свинины, подходит для жарки и тушения.",
-        "image": "https://upload.wikimedia.org/wikipedia/commons/4/49/Raw_pork.jpg"
+        "name": "Макаронные изделия",
+        "description": "Рожки гладкие 400гр",
+        "image": "https://img.05.ru/ut11img/darkstore/00000169813/3.jpg"
       },
       {
         "id": 15,
-        "brand": "Марка Р",
-        "price": 120.00,
-        "name": "Печенье овсяное",
-        "description": "Полезное овсяное печенье с натуральными ингредиентами.",
-        "image": "https://upload.wikimedia.org/wikipedia/commons/2/29/Oatmeal_cookies.jpg"
+        "brand": "Фасоль красная Мистраль",
+        "price": 220.00,
+        "name": "Фасоль красная",
+        "description": "для супов и гарниров 450гр",
+        "image": "https://img.05.ru/ut11img/darkstore/00000175574/8.jpg"
       }
-    ]
-    ,
+    ],
       cart: []
   }),
 

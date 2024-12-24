@@ -2,6 +2,7 @@
   <v-sheet class="ma-2 pa-2">
     <v-card
         class="product"
+        @click="goToProductPage(props.productData.id)"
     >
       <v-img
           :src="props.productData.image"
@@ -23,36 +24,49 @@
       </v-card-text>
 
       <v-card-actions>
-        <v-btn @click="goToProductPage(props.productData.id)" class="button">
-          Перейти к товару
+        <v-btn @click.stop="addToCart" class="button">
+          Добавить в корзину
         </v-btn>
       </v-card-actions>
     </v-card>
   </v-sheet>
 </template>
 
-<script>
-  import { defineComponent } from "vue";
-  export default defineComponent({
-    name: 'ProductItem',
-  })
-</script>
-
 <script setup>
-  import { defineProps, defineEmits } from 'vue'
+  import { defineProps, defineEmits } from 'vue';
+  import { computed } from 'vue';
+  import { productsStore } from "@/stores/products";
+
+  const store = productsStore();
+  
   const props = defineProps({
     productData: {
       type: Object,
       required: true,
     }
-  })
+  });
 
-  const emit = defineEmits(['item-clicked'])
+  // Функция для поиска продукта по ID
+  const selectedProduct = computed(() => {
+    return store.products.find((item) => item.id === props.productData.id);
+  });
 
+  const emit = defineEmits(['item-clicked']);
+
+  // Переход на страницу товара
   const goToProductPage = (productId) => {
-    emit('item-clicked', productId)
-  }
+    emit('item-clicked', productId);
+  };
+
+  // Добавление товара в корзину
+  const addToCart = () => {
+    const product = selectedProduct.value;  // Получаем продукт из computed
+    if (product) {
+      store.addToCart(product);  // Добавляем продукт в корзину
+    }
+  };
 </script>
+
 <style scoped>
 .product{
   height: 425px;
@@ -63,17 +77,19 @@
   padding:15px;
   transition: all .03s ease-in-out;
   border-radius: 15px;
+}
 
+.product:hover {
+  scale: 1.01;
 }
-.product:hover{
-  scale:1.01
-}
+
 .button{
   background-color: #0CD467;
   color:white;
   padding:10px 15px;
 }
-.image{
+
+.image {
   border-radius: 15px;
 }
 </style>
